@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 450px;
+    margin: 15px auto;
+}
+/*
+Height-ot nem kell már beállítani, mert meg van adva a container-ben 
+numbers az egy grid lesz!!!!
+*/
+#numbers {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    height: 500px;
+}
+
+.number {
+    background-color: #b7e7a4;
+    border: 1px solid #9bc48b;
+    display: flex; /*ezzel középre rakjuk azokat a dolgokat, amik benne lesznek*/
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 -1px -1px 0; /*figyelni kell arra, hogy duplikálodnak ezek, ezért kell majd jobboldalt meg alul -1px*/
+}
+
+/* .number:active {
+    background-color: #d2f2c6;
+    border: 1px solid #a6d196;
+} itt ha rákattintunk a számra, akkor kap egy másik háttérszínt illetve egy másik border-t*/
+
+.selected {
+    background-color: #d2f2c6;
+    border: 1px solid #a6d196;  
+}
+
+button {
+    padding: 8px;
+    display: block;
+    margin: 10px auto;
+}
+
+#results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+.box {
+    background-color: #efefef;
+    border: 1px solid #d2d2d2;
+    margin-right: -1px;
+    padding: 5px;
+    text-align: center;
+}
